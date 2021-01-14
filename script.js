@@ -11,25 +11,24 @@
 
 
 // METHODE PERSO AUTO MUSIC
-// var yourAudio = document.getElementById('yourAudio');
-var play = document.getElementById('play');
-var like = document.getElementById('like_icon');
-var song1 = document.getElementById('song1')
-var icon_heart = '<i class="fas fa-heart"></i>';
+var play = document.querySelector('#play');
+var song1 = document.querySelector('#song1')
+var like_icon = document.querySelector('#like_album')
 
-like.onclick = function () {
+
+like_icon.addEventListener("click", () => {
     // Update the Button
-    var unlike = like.innerHTML === '<i class="fas fa-heart" aria-hidden="true"></i>';
-    like.innerHTML = unlike ? '<i class="far fa-heart" aria-hidden="true"></i>' : '<i class="fas fa-heart" aria-hidden="true"></i>';
-};
-// like.onclick = function () {
-//     // Update the Button
-//     var like_full = like.innerHTML === '<i class="far fa-heart"></i>';
-//     like.innerHTML = like_full ? 'osef' : '<i class="far fa-heart"></i>';
-// };
+    if( like_icon.classList.contains('far')){
+        like_icon.classList.remove('far');
+        like_icon.classList.add('fas');
+    } 
+     else if (like_icon.classList.contains('fas')) {
+        like_icon.classList.remove('fas');
+        like_icon.classList.add('far');
+    }
+});
 
-
-play.onclick = function () {
+play.addEventListener("click", () => {
     
     // Update the Button
     var pause = play.innerHTML === 'PAUSE';
@@ -48,4 +47,4 @@ play.onclick = function () {
 
     // Prevent Default Action
     return false;
-};
+});
