@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FakeIfy</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <!-- <script src="./script.js"></script> -->
+        <script src="https://kit.fontawesome.com/3514aa6d91.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav id="nav">
+            <span id="site_name">FakeIfy</span>
+        </nav>
+        <section id="section1">
+            <div class="topbar">
+                <img class="album_cover" src="./assets/tha_carter_4_cover.jpg" alt="Tha Carter IV Cover">
+                <div class="topbar_right">
+                    <p class="type_of">ALBUM</p>
+                    <h1 class="album_name">Tha Carter IV(DELUXE)</h1>
+                    <h3 class="album_artist">Par <a class="album_artist_name" href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a></h3>
+                    <h3 class="album_info">2011 • 18 titres, 1 h 11 min</h3>
+                </div>
+            </div>
+            <div class="choice_button">
+                <div id="play"><p id="play_text">LIRE</p></div>
+                <div id="like"><p id="like_icon"><i class="far fa-heart" aria-hidden="true"></i></p></div>
+                <div id="option"><i class="fas fa-ellipsis-h"></i></div>
+            </div>
+            <div class="list">
+                <table class="playlist">
+                    <thead class="playlist_header">
+                        <tr >
+                            <th>#</th>
+                            <th></th>
+                            <th class="song_title_head">TITRE</th>
+                            <th>ARTIST</th>
+                            <th><i class="far fa-clock"></i></th>
+                            <th><i class="far fa-thumbs-up"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody class="playlist_body">
+                        <tr id="song1">
+                            <td>1</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">Intro</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a></td>
+                            <td>2:52</td>
+                            <td>||||||</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">Blunt Blowin</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a></td>
+                            <td>5:13</td>
+                            <td>||||||</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">MegaMan</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a></td>
+                            <td>3:18</td>
+                            <td>||||||</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">6 Foot 7 Foot</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>, <a href="https://open.spotify.com/artist/7BAaznGSsqcksud4R5ou5z?si=Z18kdQcnR1ah86xFEc86GA">Cory Gunz</a></td>
+                            <td>4:09</td>
+                            <td>||||||</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">Nightmare Of The Bottom</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a></td>
+                            <td>4:41</td>
+                            <td>||||||</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="song_like"><i class="far fa-heart"></td>
+                            <td class="song_title">She Will</td>
+                            <td><a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>, <a href="https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4?si=Fkw-i204QOS4AWlvU3O_1g">Drake</a></td>
+                            <td>5:06</td>
+                            <td>||||||</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+        <!-- <section id="player">
+            <i class="fas fa-play"></i> -->
+            <audio id="yourAudio" preload='none'>
+                <source src="./assets/music/pop_smoke_dior.mp3" type="audio/mp3">
+            </audio>
+            <!-- <a href="#" id="audioControl">play!</a>
+            <div class="img_box">
+                <img class="music_cover" src="./assets/pop_smoke_dior_cover.jpg" alt="dior_cover">
+            </div>
+            <script src="./script.js"></script>
+        </section> -->
+    </body>
+    <script src="./script.js"></script>
+</html>
