@@ -3,47 +3,82 @@
 var songsToAdd = [
     {
       "name": "Intro",
-      "artist": "Lil Wayne",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>',
+      "duration": "2:52",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
     {
       "name": "Blunt Blowin",
-      "artist": "Lil Wayne",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>',
+      "duration": "5:13",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
     {
       "name": "MegaMan",
-      "artist": "Lil Wayne,",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>',
+      "duration": "3:18",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
     {
       "name": "6 Foot 7 Foot",
-      "artist": "Lil Wayne, Cory Gunz",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>, <a href="https://open.spotify.com/artist/7BAaznGSsqcksud4R5ou5z?si=Z18kdQcnR1ah86xFEc86GA">Cory Gunz</a',
+      "duration": "4:09",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
     {
       "name": "Nightmares Of The Bottom",
-      "artist": "Lil Wayne",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>',
+      "duration": "4:41",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
     {
-      "name": "She Whill",
-      "artist": "Lil Wayne, Drake",
+      "name": "She Will",
+      "artist": '<a href="https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865">Lil Wayne</a>, <a href="https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4?si=Fkw-i204QOS4AWlvU3O_1g">Drake</a>',
+      "duration": "5:06",
       "url": "./assets/music/pop_smoke_dior.mp3",
       "cover_art_url": "./assets/pop_smoke_dior_cover.jpg"
     },
   ];
 
-var playlist = document.querySelector('playlist');
+var playlist = document.querySelector('.playlist');
+var playlist_body = document.querySelector('.playlist_body');
+
+
+// Remplissage du tableau dynamiquement
+function fillTable() {
+    for (let i in songsToAdd)  {
+        // console.log('index = ', songsToAdd[i]);
+        // playlist_body.insertRow(-1);
+        const newtr = document.createElement('tr')
+        var colonne1 = newtr.insertCell(0);//on a une ajouté une cellule
+            colonne1.innerHTML += i ;//on y met le contenu de titre
+        var colonne2 = newtr.insertCell(1);//on a une ajouté une cellule
+	        colonne2.innerHTML += '<i class="far fa-heart">';//on y met le contenu de titre
+        var colonne3 = newtr.insertCell(2);//on a une ajouté une cellule
+            colonne3.innerHTML += songsToAdd[i].name;//on y met le contenu de titre
+        var colonne3 = newtr.insertCell(3);//on a une ajouté une cellule
+            colonne3.innerHTML += songsToAdd[i].artist;//on y met le contenu de titre
+        var colonne4 = newtr.insertCell(4);//on a une ajouté une cellule
+            colonne4.innerHTML += songsToAdd[i].duration;//on y met le contenu de titre
+        var colonne4 = newtr.insertCell(5);//on a une ajouté une cellule
+            colonne4.innerHTML += "|||||";//on y met le contenu de titre
+        newtr.id = "song" + i 
+        playlist_body.appendChild(newtr);
+
+    }
+
+ }
+
+ fillTable();
 
 
 var play = document.querySelector('#play');
-var song1 = document.querySelector('#song1')
+var song1 = document.querySelector('#song0')
 var like_icon = document.querySelector('#like_album')
 
 
@@ -58,7 +93,7 @@ like_icon.addEventListener("click", () => {
         like_icon.classList.remove('fas');
         like_icon.classList.add('far');
     }
-    playlist.style.background = 'green';
+
 });
 
 // Fonction play/pause
@@ -85,6 +120,5 @@ play.addEventListener("click", () => {
 });
 
 
-// Fonctions add to tableau
 
-    
+
