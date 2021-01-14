@@ -58,7 +58,7 @@ like_icon.addEventListener("click", () => {
         like_icon.classList.remove('fas');
         like_icon.classList.add('far');
     }
-    playlist.style.background = 'green';
+    playlist.style.background = 'green' ;
 });
 
 // Fonction play/pause
