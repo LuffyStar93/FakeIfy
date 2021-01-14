@@ -81,7 +81,7 @@ play.addEventListener("click", () => {
     };
 
     // Prevent Default Action
-    return false;
+    return false ;
 });
 
 
